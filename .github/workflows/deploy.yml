@@ -1,0 +1,14 @@
+name: deploy to EC2
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: pushed to main
+        run: |
+          echo "Pushed to main branch"
